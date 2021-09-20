@@ -1,1 +1,2 @@
-# game-zombies
+#Zombie Arena
+-dodge the zombies!

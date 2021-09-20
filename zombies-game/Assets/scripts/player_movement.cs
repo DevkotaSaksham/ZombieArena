@@ -5,6 +5,8 @@ using UnityEngine;
 public class player_movement : MonoBehaviour
 {
     public healthbar h;
+    public score a;
+    public FinalScore f;
     public float maxhealth = 100;
     public float currenthealth;
     public Transform traansform;
@@ -30,7 +32,9 @@ public class player_movement : MonoBehaviour
             enemyprefab.SetActive(false);
             dyingsound.Play();
             losingtext.SetActive(true);
-            
+            Debug.Log("hi");
+            a.scored();
+
         }
     }
     void Start()
@@ -85,7 +89,13 @@ public class player_movement : MonoBehaviour
     void takedamage(float damage)
     {
         currenthealth -= damage* Time.fixedDeltaTime;
-        if (currenthealth == 0) { losingtext.SetActive(true); }
+        if (currenthealth == 0) {
+            
+           
+            
+            losingtext.SetActive(true);
+           
+        }
         h.sethealth(currenthealth);
     }
 }

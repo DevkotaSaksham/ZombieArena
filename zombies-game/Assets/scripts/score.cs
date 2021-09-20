@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class score : MonoBehaviour
 {
     public float t;
+    public FinalScore f;
     // Start is called before the first frame update
   
     public Text points;
@@ -21,5 +22,14 @@ public class score : MonoBehaviour
        
         points.text ="Score:"+(int)t;
         t = t + 1 * Time.deltaTime;
+       
+
+    }
+   public void scored()
+    {
+        Debug.Log(t);
+        f.Final(t);
+        //points.text = "Final Score:" + ((int)t).ToString();
+        
     }
 }

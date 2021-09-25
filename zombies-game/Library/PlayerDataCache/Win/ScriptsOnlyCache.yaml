@@ -4,6 +4,7 @@ ScriptsOnlyBuild:
     - FinalScore
     - enemy
     - healthbar
+    - mainMenu
     - player_movement
     - score
     - soundplayer
@@ -24,6 +25,13 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_ColorGradient
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshProUGUI
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -31,11 +39,13 @@ ScriptsOnlyBuild:
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
     - Class: 1
@@ -69,45 +79,45 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11258}
-    - Class: 114
-      Script: {instanceID: 11282}
-    - Class: 114
       Script: {instanceID: 11284}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11308}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11310}
     - Class: 114
-      Script: {instanceID: 11612}
+      Script: {instanceID: 11372}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11436}
     - Class: 114
-      Script: {instanceID: 11822}
+      Script: {instanceID: 11638}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 11702}
     - Class: 114
-      Script: {instanceID: 12396}
+      Script: {instanceID: 11848}
     - Class: 114
-      Script: {instanceID: 12480}
+      Script: {instanceID: 12384}
     - Class: 114
-      Script: {instanceID: 13008}
+      Script: {instanceID: 12422}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 12508}
     - Class: 114
-      Script: {instanceID: 13134}
+      Script: {instanceID: 13036}
     - Class: 114
-      Script: {instanceID: 13460}
+      Script: {instanceID: 13120}
     - Class: 114
-      Script: {instanceID: 13672}
+      Script: {instanceID: 13162}
     - Class: 114
-      Script: {instanceID: 14052}
+      Script: {instanceID: 13488}
     - Class: 114
-      Script: {instanceID: 14128}
+      Script: {instanceID: 13700}
     - Class: 114
-      Script: {instanceID: 14654}
+      Script: {instanceID: 14080}
     - Class: 114
-      Script: {instanceID: 14708}
+      Script: {instanceID: 14156}
+    - Class: 114
+      Script: {instanceID: 14682}
+    - Class: 114
+      Script: {instanceID: 14736}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -129,6 +139,71 @@ ScriptsOnlyBuild:
     - Class: 224
       Script: {instanceID: 0}
     - Class: 238
+      Script: {instanceID: 0}
+    Assets/Scenes/menuScreen.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11310}
+    - Class: 114
+      Script: {instanceID: 11638}
+    - Class: 114
+      Script: {instanceID: 11702}
+    - Class: 114
+      Script: {instanceID: 12422}
+    - Class: 114
+      Script: {instanceID: 12480}
+    - Class: 114
+      Script: {instanceID: 12500}
+    - Class: 114
+      Script: {instanceID: 13214}
+    - Class: 114
+      Script: {instanceID: 13602}
+    - Class: 114
+      Script: {instanceID: 13622}
+    - Class: 114
+      Script: {instanceID: 13966}
+    - Class: 114
+      Script: {instanceID: 14080}
+    - Class: 114
+      Script: {instanceID: 14384}
+    - Class: 114
+      Script: {instanceID: 14558}
+    - Class: 114
+      Script: {instanceID: 14736}
+    - Class: 114
+      Script: {instanceID: 14760}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -479,6 +554,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: mainMenu
   - hash:
       serializedVersion: 2
       Hash: 611bc970ee9dc090779a3fac6a18fac6
@@ -973,5 +1054,6 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   platform: 5
   scenePathNames:
+  - Assets/Scenes/menuScreen.unity
   - Assets/Scenes/SampleScene.unity
   playerPath: C:/Users/DELL/Desktop/game/fnldscre/Zombie Arena.exe

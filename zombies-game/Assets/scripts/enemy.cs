@@ -6,7 +6,12 @@ using UnityEngine.AI;
 public class enemy : MonoBehaviour
 {
     private Transform target;
+    public Transform looktarget;
     private NavMeshAgent agent;
+
+    private Vector3 targetPos;
+    private Vector3 thisPos;
+    private float angle;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +22,22 @@ public class enemy : MonoBehaviour
         agent.speed = Random.Range(2, 5);
 
     }
+      void LateUpdate()
+      {
+          targetPos = target.position;
+          thisPos = transform.position;
+          targetPos.x = targetPos.x - thisPos.x;
+          targetPos.y = targetPos.y - thisPos.y;
+          angle = Mathf.Atan2(  targetPos.y, targetPos.x) * Mathf.Rad2Deg;
+          transform.rotation = Quaternion.Euler(new Vector3(0, 0, angle -90));
+      }
 
-    // Update is called once per frame
+
     void Update()
     {
+
         agent.SetDestination(target.transform.position);
+       
+
     }
 }

@@ -55,7 +55,7 @@ public class player_movement : MonoBehaviour
         animator.SetFloat("vertical", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
-        if (movement.x == 0 && movement.y == 0)
+        if (movement.x == 0 && movement.y == 0 && pauseMenu.GameIsPaused == false)
         {
             temp = transform.localScale;
             temp.x = 3;
